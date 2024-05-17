@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <title>Pagamento</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+  </head>
+  <body class="bg-body-tertiary">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid col">
+          <div class="container col-5">
+            <a class="navbar-brand" href="#">
+              <img src="../assets/brand/Steam_gray-brown_logo_with_text.svg" alt="Steam">
+            </a>
+          </div>
+          <div class="collapse navbar-collapse col-3" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Loja</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Comunidade</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Suporte</a>
+              </li>
+              <li class="nav-item">
+                <button type="button" class="btn position-relative">
+                  Carrinho
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    2
+                  </span>
+                </button>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+              <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section id="checkoutMain">
+      <div class="container">
+        <main>
+          <div class="row g-5">
+            <div class="col-md-5 col-lg-4 order-md-last">
+              <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-primary">Seu carrinho</span>
+                <span class="badge bg-primary rounded-pill">2</span>
+              </h4>
+              <ul class="list-group mb-3">
+                <!-- Repetir esse componente -->
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-0">Primeiro produto</h6> <!-- TODO indexar ao banco -->
+                    <small class="text-body-secondary">Descrição do produto</small> <!-- TODO indexar ao banco -->
+                  </div>
+                  <span class="text-body-secondary">R$12</span> <!-- TODO indexar ao banco -->
+                </li>
+                <!-- Repetir esse componente -->
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-0">segundo produto</h6>
+                    <small class="text-body-secondary">Descrição do produto 2</small>
+                  </div>
+                  <span class="text-body-secondary">R$8</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-0">Terceiro produto</h6>
+                    <small class="text-body-secondary">Descrição do produto 3</small>
+                  </div>
+                  <span class="text-body-secondary">R$5</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+                  <div class="text-success">
+                    <h6 class="my-0">Código promocional</h6>
+                    <small>EXAMPLECODE</small>
+                  </div>
+                  <span class="text-success">−R$5</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <span>Total (R$)</span>
+                  <strong>R$20</strong>
+                </li>
+              </ul>
+      
+              <form class="card p-2">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Promo code">
+                  <button type="submit" class="btn btn-secondary">Resgatar</button>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-7 col-lg-8">
+              <h4 class="mb-3">Informações para cobrança</h4>
+              <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Primeiro nome</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      É necessário um nome válido.
+                    </div>
+                  </div>
+      
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Sobrenome</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      É necessário um sobrenome válido
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="username" class="form-label">Username</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text">@</span>
+                      <input type="text" class="form-control" id="username" placeholder="Username" required>
+                      <div class="invalid-feedback">  
+                        É necessário um username válido.
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email <span class="text-body-secondary">(Opcional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="seu@example.com">
+                    <div class="invalid-feedback">
+                      Por favor entre com o email que foi usado na sua conta.
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="address" class="form-label">Endereço</label>
+                    <input type="text" class="form-control" id="address" placeholder="Rua..." required>
+                    <div class="invalid-feedback">
+                      Por favor entre com o seu endereço
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="address2" class="form-label">Endereço 2 <span
+                        class="text-body-secondary">(Opcional)</span></label>
+                    <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                  </div>
+      
+                  <div class="col-md-5">
+                    <label for="country" class="form-label">País</label>
+                    <select class="form-select" id="country" required>
+                      <option value="">Escolha</option>
+                      <option>Brasil</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor entre um país válido.
+                    </div>
+                  </div>
+      
+                  <div class="col-md-4">
+                    <label for="state" class="form-label">Estado</label>
+                    <select class="form-select" id="state" required>
+                      <option value="">escolha...</option>
+                      <option>Paraná</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor entre com um estado válido
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="zip" class="form-label">CEP</label>
+                    <input type="text" class="form-control" id="zip" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Requer CEP.
+                    </div>
+                  </div>
+                </div>
+      
+                <hr class="my-4">
+      
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="same-address">
+                  <label class="form-check-label" for="same-address">O endreço de entrega é o mesmo do cadastro
+                    address</label>
+                </div>
+      
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="save-info">
+                  <label class="form-check-label" for="save-info">Salvar essas informações para a proxima vez</label>
+                </div>
+      
+                <hr class="my-4">
+      
+                <h4 class="mb-3">Pagamento</h4>
+      
+                <div class="my-3">
+                  <div class="form-check">
+                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                    <label class="form-check-label" for="credit">Cartão de crédito</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="debit">Cartão de débito</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="paypal">PayPal</label>
+                  </div>
+                </div>
+      
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <label for="cc-name" class="form-label">Nome no cartão</label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                    <small class="text-body-secondary">Nome como consta no cartão </small>
+                    <div class="invalid-feedback">
+                      É necessário um nome.
+                    </div>
+                  </div>
+      
+                  <div class="col-md-6">
+                    <label for="cc-number" class="form-label">Número do cartão</label>
+                    <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                    <div class="invalid-feedback">
+                      É necessário um número.
+
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="cc-expiration" class="form-label">Data de validade</label>
+                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Data de validade necessário.
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="cc-cvv" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Security code required
+                    </div>
+                  </div>
+                </div>
+      
+                <hr class="my-4">
+      
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Confirmar pagamento</button>
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+    <footer class="bg-dark text-center text-white mt-4">
+      <div class="container p-4">
+        <section class="mb-4">
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+        </section>
+    
+        <section class="mb-4">
+          <p>
+            Bem-vindo à Steam, a principal plataforma de distribuição digital de jogos e software, onde milhões
+            de jogadores se reúnem para jogar, criar e compartilhar experiências de jogos. Com milhares de jogos
+            disponíveis,
+            de indies a AAA, sempre há algo novo para jogar.
+          </p>
+        </section>
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-white">Suporte</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">SAC</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">FAQ</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Feedback</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-white">Quem somos</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Investidores</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Notícias</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Promoções</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">SteamPOO</a>
+      </div>
+    </footer>
+
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="checkout.js"></script></body>
+</html>
