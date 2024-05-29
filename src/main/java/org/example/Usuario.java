@@ -6,17 +6,24 @@ import java.util.List;
 abstract class Usuario {
     public String nome;
     public String email;
+    protected CarrinhoDeCompras carrinho;
+    protected Biblioteca biblioteca;
+
+    Usuario(String nome, String email, CarrinhoDeCompras carrinho, Biblioteca biblioteca) {
+        this.nome = nome;
+        this.email = email;
+        this.carrinho = carrinho;
+        this.biblioteca = biblioteca;
+    }
 
     abstract void enviarEmail();
 }
-
 class Jogador extends Usuario {
     List<String> jogosComprados;
 
-    Jogador(String nome, String email) {
-        this.nome = nome;
-        this.email = email;
-        jogosComprados = new ArrayList<>();
+    Jogador(String nome, String email, CarrinhoDeCompras carrinho, Biblioteca biblioteca) {
+        super(nome, email, carrinho, biblioteca);
+        this.jogosComprados = new ArrayList<>();
     }
 
     @Override
@@ -30,7 +37,6 @@ class Jogador extends Usuario {
     }
 
     void compraCredito(boolean valor) {
-        // Lógica para compra de crédito
         if (valor) {
             System.out.println(nome + " comprou crédito.");
         } else {
@@ -42,10 +48,9 @@ class Jogador extends Usuario {
 class Desenvolvedor extends Usuario {
     List<String> jogosPublicados;
 
-    Desenvolvedor(String nome, String email) {
-        this.nome = nome;
-        this.email = email;
-        jogosPublicados = new ArrayList<>();
+    Desenvolvedor(String nome, String email, CarrinhoDeCompras carrinho, Biblioteca biblioteca) {
+        super(nome, email, carrinho, biblioteca);
+        this.jogosPublicados = new ArrayList<>();
     }
 
     @Override
@@ -58,3 +63,4 @@ class Desenvolvedor extends Usuario {
         System.out.println(nome + " publicou o jogo: " + jogo);
     }
 }
+
