@@ -1,0 +1,18 @@
+{
+  "usuario": {
+    "pedro": {
+      "idade":30
+    },
+    "Mario": {
+      "idade": 32
+    }
+  },
+  "carrinho": {
+    "Jogo" : {
+
+    },
+    "jogo": {
+
+    }
+  }
+}
