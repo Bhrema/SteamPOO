@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <title>Main Page</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+
+    <style>
+        #carousel-main img {
+    max-height: 500px;
+    object-fit: cover;
+}
+    </style>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid col">
+                    <div class="container col-5">
+                        <a class="navbar-brand" href="#">
+                            <img src="../assets/brand/Steam_gray-brown_logo_with_text.svg" alt="Steam">
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse col-3" id="navbarSupportedContent">
+                          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                  <a class="nav-link active" aria-current="page" href="#">Loja</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#">Comunidade</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#">Sobre</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="#">Suporte</a>
+                              </li>
+                              <li class="nav-item">
+                                <button type="button" class="btn position-relative">
+                                  Carrinho
+                                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    2
+                                  </span>
+                                </button>
+                              </li>
+                          </ul>
+                          <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                            <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                        </form>
+                      </div>                  
+                </div>
+            </nav>
+        </header>
+        <main>
+          <section class="carouselMain">
+            <div id="carouselMain" class="carousel slide">
+              <div class="carousel-inner">
+                <div id="carousel-main" class="carousel-item active" data-bs-interval="1000">
+                  <img src="../assets/images/theinvincible.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div id="carousel-main" class="carousel-item" data-bs-interval="1000">
+                  <img src="../assets/images/darkest.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div id="carousel-main" class="carousel-item" data-bs-interval="1000">
+                  <img src="../assets/images/vrising.jpg" class="d-block w-100" alt="...">
+                </div>
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+          </section>
+          
+          <h5 class="d-flex justify-content-center align-items-center mt-5">RECOMENDADOS E EM DESTAQUE</h5> <!-- TODO: alinhar com o começo do carousel -->
+          <section class="carouselcards d-flex justify-content-center align-items-center ">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000000">
+                  <div class="card mb-3" style="max-width: 800px;">
+                    <div class="row g-0">
+                      <div class="col-md-6">
+                        <img src="../assets/images/farmsimulator.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="col-md-6">
+                        <div class="card-body">
+                          <h5 class="card-title">Farm Simulator</h5>
+                          <p class="card-text pb-4">Construa a sua fazenda e utilize maquinários de última geração para trabalhar!</p>
+                          <div class="col mt-4">
+                            <a href="#" class="btn btn-secondary me-2">Adicionar ao carrinho</a>
+                            <a href="#" class="btn btn-secondary">Adicionar a whishlist</a>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="showRoom mt-3">
+          <h5 class="d-flex justify-content-center align-items-center mt-5">EXPLORE!</h5> <!-- TODO: alinhar com o começo do carousel -->
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="card" style="width: 18rem;">
+                    <img src="../assets/images/portal.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Portal</h5>
+                      <p class="card-text">O Portal™ é um novo jogo da Valve para um jogador. Passado nos misteriosos Laboratórios Aperture Science, 
+                        Portal é considerado um dos jogos mais inovadores do horizonte e irá proporcionar aos jogadores horas de jogo sem igual.</p>
+                        <div class="row mt-4">
+                          <a href="#" class="btn btn-secondary mb-3">Adicionar ao carrinho</a>
+                          <a href="#" class="btn btn-secondary">Adicionar a whishlist</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="bg-dark text-center text-white">
+            <div class="container p-4">
+              <section class="mb-4">
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+              </section>
+          
+              <section class="mb-4">
+                <p>
+                    Bem-vindo à Steam, a principal plataforma de distribuição digital de jogos e software, onde milhões 
+                    de jogadores se reúnem para jogar, criar e compartilhar experiências de jogos. Com milhares de jogos disponíveis, 
+                    de indies a AAA, sempre há algo novo para jogar.
+                </p>
+              </section>
+              <section class="">
+                <!--Grid row-->
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+          
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a href="#!" class="text-white">Suporte</a>
+                      </li>
+                      <li>
+                        <a href="#!" class="text-white">SAC</a>
+                      </li>
+                      <li>
+                        <a href="#!" class="text-white">FAQ</a>
+                      </li>
+                      <li>
+                        <a href="#!" class="text-white">Feedback</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+          
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a href="#!" class="text-white">Quem somos</a>
+                      </li>
+                      <li>
+                        <a href="#!" class="text-white">Investidores</a>
+                      </li>
+                      <li>
+                        <a href="#!" class="text-white">Notícias</a>
+                      </li>
+                      <li>
+                        <a href="#!" class="text-white">Promoções</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2024 Copyright:
+              <a class="text-white" href="https://mdbootstrap.com/">SteamPOO</a>
+            </div>
+        </footer>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
