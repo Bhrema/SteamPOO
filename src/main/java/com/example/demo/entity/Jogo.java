@@ -1,12 +1,25 @@
-package org.example;
+package com.example.demo.entity;
+
+import jakarta.persistence.*;
 
 import java.util.List;
 
-abstract public class Jogo {
+@Entity
+public abstract class Jogo {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
     private String titulo;
+
+    @ManyToOne
     private Desenvolvedor desenvolvedor;
+
     private int ano;
     private double valor;
+
+    @ElementCollection
     private List<String> categorias;
 
     public Jogo(String titulo, Desenvolvedor desenvolvedor, int ano, double valor, List<String> categorias) {

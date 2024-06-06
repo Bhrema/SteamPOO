@@ -6,7 +6,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body class="bg-body-tertiary">
@@ -46,21 +46,30 @@
               <div class="row g-5">
               <div class="col-md-7 col-lg-7 ">
                   <h4 class="mb-3">CADASTRE-SE</h4>
-                  <form class="needs-validation" novalidate>
+                  <form action="/cadastrarUsuario" method="post" class="needs-validation" novalidate>
                     <div class="row g-2">
-                      <div class="col-12">Endereço de email</label>
-                          <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                      <div class="col-12">
+                          <label for="email" class="form-label">Endereço de email</label>
+                          <input type="text" class="form-control" id="email" placeholder="" value="" required>
                           <div class="invalid-feedback">
                               É necessário um email válido.
                           </div>
                       </div>
                       <div class="col-12">
-                          <label for="firstName" class="form-label">Confirme seu email</label>
-                          <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                          <label for="email-confirm" class="form-label">Confirme seu email</label>
+                          <input type="text" class="form-control" id="email-confirm" placeholder="" value="" required>
                           <div class="invalid-feedback">
                               É necessário um email válido.
                           </div>
                       </div>
+                        <div class="col-12">
+                            <label for="password" class="form-label">Digite uma senha</label>
+                            <input type="text" class="form-control" id="password" placeholder="" value="" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="password-confirm" class="form-label">Confirme a senha</label>
+                            <input type="text" class="form-control" id="password-confirm" placeholder="" value="" required>
+                        </div>
                       <div class="col-12">
                           <label for="country" class="form-label">País de residência</label>
                           <select class="form-select" id="country" required>
